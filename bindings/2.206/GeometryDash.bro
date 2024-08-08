@@ -482,8 +482,8 @@ class AudioAssetsBrowser : FLAlertLayer, TableViewCellDelegate, MusicDownloadDel
 
 	virtual void registerWithTouchDispatcher() = m1 0x6c7140, imac 0x7c14e0;
 	virtual void keyBackClicked() = m1 0x6c70c4, imac 0x7c1470;
-	virtual TodoReturn musicActionFinished(GJMusicAction) = m1 0x6c7070, imac 0x7c1390;
-	virtual TodoReturn musicActionFailed(GJMusicAction) = m1 0x6c707c, imac 0x7c13c0;
+	virtual void musicActionFinished(GJMusicAction) = m1 0x6c7070, imac 0x7c1390;
+	virtual void musicActionFailed(GJMusicAction) = m1 0x6c707c, imac 0x7c13c0;
 	virtual void cellPerformedAction(TableViewCell*, int, CellAction, cocos2d::CCNode*) = m1 0x6c7090, imac 0x7c1400;
 	virtual TodoReturn getSelectedCellIdx() = m1 0x6c70a0, imac 0x7c1420;
 	virtual TodoReturn getCellDelegateType() = m1 0x6c70b0, imac 0x7c1440;
