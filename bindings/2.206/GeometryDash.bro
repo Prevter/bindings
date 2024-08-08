@@ -470,9 +470,9 @@ class ArtistCell : TableViewCell {
 class AudioAssetsBrowser : FLAlertLayer, TableViewCellDelegate, MusicDownloadDelegate {
 	// virtual ~AudioAssetsBrowser();
 
-	static AudioAssetsBrowser* create(gd::vector<int>&, gd::vector<int>&);
+	static AudioAssetsBrowser* create(gd::vector<int>& songIds, gd::vector<int>& sfxIds);
 
-	bool init(gd::vector<int>&, gd::vector<int>&);
+	bool init(gd::vector<int>& songIds, gd::vector<int>& sfxIds);
 	void onClose(cocos2d::CCObject* sender);
 	void onInfo(cocos2d::CCObject* sender);
 	void onPage(cocos2d::CCObject* sender);
@@ -488,11 +488,11 @@ class AudioAssetsBrowser : FLAlertLayer, TableViewCellDelegate, MusicDownloadDel
 	virtual TodoReturn getSelectedCellIdx() = m1 0x6c70a0, imac 0x7c1420;
 	virtual TodoReturn getCellDelegateType() = m1 0x6c70b0, imac 0x7c1440;
 
-	void* m_unk288;
+	cocos2d::CCArray* m_songInfoObjects;
 	GJCommentListLayer* m_songList;
-	cocos2d::CCLabelBMFont* m_unk298;
-	gd::vector<int> m_unkVec1;
-	gd::vector<int> m_unkVec2;
+	cocos2d::CCLabelBMFont* m_pageIndicatorLabel;
+	gd::vector<int> m_songsIds;
+	gd::vector<int> m_sfxIds;
 	LoadingCircleSprite* m_loadingCircle;
 }
 
