@@ -1994,6 +1994,58 @@ class CheckpointObject : cocos2d::CCNode {
 }
 
 [[link(android)]]
+class cocos2d::CCLightning : cocos2d::CCNode, cocos2d::CCRGBAProtocol {
+    // virtual ~CCLightning();
+    CCLightning() = win 0x43580;
+
+    static CCLightning* lightningWithStrikePoint(cocos2d::CCPoint strikePoint, cocos2d::CCPoint strikePoint2, float duration) = win 0x436c0;
+    static CCLightning* lightningWithStrikePoint(cocos2d::CCPoint strikePoint) = win inline {
+		auto ret = new CCLightning();
+		if (ret->initWithStrikePoint(strikePoint)) {
+			ret->autorelease();
+			return ret;
+		}
+		delete ret;
+		return nullptr;
+	}
+
+    bool initWithStrikePoint(cocos2d::CCPoint strikePoint, cocos2d::CCPoint strikePoint2, float duration) = win 0x43760;
+    bool initWithStrikePoint(cocos2d::CCPoint strikePoint) = win inline {
+        return initWithStrikePoint(strikePoint, {0, 0}, 0.5f);
+    }
+
+    void strike() = win 0x43a00;
+    void strikeFinished() = win 0x43a70;
+
+    void strikeRandom() = win inline {
+        m_seed = rand();
+        this->strike();
+    }
+
+    void strikeWithSeed(uint64_t seed) = win inline {
+        m_seed = seed;
+        this->strike();
+    }
+
+    void draw() = win 0x43880;
+
+    bool isOpacityModifyRGB();
+    void setOpacityModifyRGB(bool);
+    unsigned char getOpacity();
+    unsigned char getDisplayedOpacity();
+    void setOpacity(unsigned char);
+    void updateDisplayedOpacity(unsigned char);
+    bool isCascadeColorEnabled();
+    void setCascadeOpacityEnabled(bool);
+    cocos2d::ccColor3B const& getColor();
+    cocos2d::ccColor3B const& getDisplayedColor();
+    void setColor(cocos2d::ccColor3B const&);
+    void updateDisplayedColor(cocos2d::ccColor3B const&);
+    bool isCascadeOpacityEnabled();
+    void setCascadeColorEnabled(bool);
+}
+
+[[link(android)]]
 class CollisionBlockPopup : FLAlertLayer, TextInputDelegate {
 	// virtual ~CollisionBlockPopup();
 
