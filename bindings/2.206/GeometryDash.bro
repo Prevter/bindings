@@ -2027,22 +2027,21 @@ class cocos2d::CCLightning : cocos2d::CCNode, cocos2d::CCRGBAProtocol {
         this->strike();
     }
 
-    void draw() = win 0x43880;
-
-    bool isOpacityModifyRGB();
-    void setOpacityModifyRGB(bool);
-    unsigned char getOpacity();
-    unsigned char getDisplayedOpacity();
-    void setOpacity(unsigned char);
-    void updateDisplayedOpacity(unsigned char);
-    bool isCascadeColorEnabled();
-    void setCascadeOpacityEnabled(bool);
-    cocos2d::ccColor3B const& getColor();
-    cocos2d::ccColor3B const& getDisplayedColor();
-    void setColor(cocos2d::ccColor3B const&);
-    void updateDisplayedColor(cocos2d::ccColor3B const&);
-    bool isCascadeOpacityEnabled();
-    void setCascadeColorEnabled(bool);
+    virtual void draw() = win 0x43880;
+    virtual bool isOpacityModifyRGB();
+    virtual void setOpacityModifyRGB(bool);
+    virtual unsigned char getOpacity();
+    virtual unsigned char getDisplayedOpacity();
+    virtual void setOpacity(unsigned char);
+    virtual void updateDisplayedOpacity(unsigned char);
+    virtual bool isCascadeColorEnabled();
+    virtual void setCascadeOpacityEnabled(bool);
+    virtual cocos2d::ccColor3B const& getColor();
+    virtual cocos2d::ccColor3B const& getDisplayedColor();
+    virtual void setColor(cocos2d::ccColor3B const&);
+    virtual void updateDisplayedColor(cocos2d::ccColor3B const&);
+    virtual bool isCascadeOpacityEnabled();
+    virtual void setCascadeColorEnabled(bool);
 }
 
 [[link(android)]]
