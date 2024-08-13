@@ -54,13 +54,13 @@ GEODE_MEMBER_CHECK(GJBaseGameLayer, m_player2, 0x898);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_groupDict, 0x95c);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_unknownE38, 0x98c);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_massiveFloatArray, 0xa48);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_portalParticlesDict, 0x2a04);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_particlesDict, 0x2a04);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_customParticles, 0x2a08);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_unclaimedParticles, 0x2a0c);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_customParticlesDictArray, 0x2a2c);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_claimedParticles, 0x2a2c);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_temporaryParticles, 0x2a30);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_attempts, 0x29d4);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_unk2a50, 0x2a50);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_gradientLayers, 0x2a50);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_startPosObject, 0x2a60);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_unk2a84, 0x2aa4);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_audioEffectsLayer, 0x2b04);
@@ -177,6 +177,8 @@ GEODE_MEMBER_CHECK(GameObject, m_hasExtendedCollision, 0x218);
 GEODE_MEMBER_CHECK(GameObject, m_scaleX, 0x3e8);
 
 GEODE_SIZE_CHECK(SetupTriggerPopup, 0x2a8);
+GEODE_SIZE_CHECK(GJOptionsLayer, 0x2d8);
+
 GEODE_MEMBER_CHECK(ColorSelectPopup, m_colorAction, 0x2f0);
 
 GEODE_MEMBER_CHECK(ChallengesPage, m_dots, 0x1FC);

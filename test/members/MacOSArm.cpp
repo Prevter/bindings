@@ -21,10 +21,10 @@ GEODE_MEMBER_CHECK(GJBaseGameLayer, m_groupDict, 0xde0);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_massiveFloatArray, 0xf6c);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_attempts, 0x2f14);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_isPlatformer, 0x2f2e);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_portalParticlesDict, 0x2f50);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_particlesDict, 0x2f50);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_customParticles, 0x2f58);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_unclaimedParticles, 0x2f60);
-GEODE_MEMBER_CHECK(GJBaseGameLayer, m_customParticlesDictArray, 0x2f90);
+GEODE_MEMBER_CHECK(GJBaseGameLayer, m_claimedParticles, 0x2f90);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_temporaryParticles, 0x2f98);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_shaderLayer, 0x2fd8);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_startPosObject, 0x2fe8);
@@ -66,5 +66,8 @@ GEODE_SIZE_CHECK(CCTextInputNode, 0x258);
 
 GEODE_SIZE_CHECK(CCLightFlash, 0x168);
 GEODE_SIZE_CHECK(CCLightStrip, 0x160);
+
+GEODE_SIZE_CHECK(SetupTriggerPopup, 0x3b0);
+GEODE_SIZE_CHECK(GJOptionsLayer, 0x3f0);
 
 #endif
