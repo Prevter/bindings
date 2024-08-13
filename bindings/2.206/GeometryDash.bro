@@ -1996,18 +1996,10 @@ class CheckpointObject : cocos2d::CCNode {
 [[link(android)]]
 class cocos2d::CCLightning : cocos2d::CCNode, cocos2d::CCRGBAProtocol {
     // virtual ~CCLightning();
-    CCLightning() = win 0x43580;
+    // CCLightning() = win 0x43580;
 
-    static CCLightning* lightningWithStrikePoint(cocos2d::CCPoint strikePoint, cocos2d::CCPoint strikePoint2, float duration) = win 0x436c0;
-    static CCLightning* lightningWithStrikePoint(cocos2d::CCPoint strikePoint) = win inline {
-		auto ret = new CCLightning();
-		if (ret->initWithStrikePoint(strikePoint)) {
-			ret->autorelease();
-			return ret;
-		}
-		delete ret;
-		return nullptr;
-	}
+    static cocos2d::CCLightning* lightningWithStrikePoint(cocos2d::CCPoint strikePoint, cocos2d::CCPoint strikePoint2, float duration) = win 0x436c0;
+    static cocos2d::CCLightning* lightningWithStrikePoint(cocos2d::CCPoint strikePoint);
 
     bool initWithStrikePoint(cocos2d::CCPoint strikePoint, cocos2d::CCPoint strikePoint2, float duration) = win 0x43760;
     bool initWithStrikePoint(cocos2d::CCPoint strikePoint) = win inline {
