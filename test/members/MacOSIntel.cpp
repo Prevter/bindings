@@ -72,7 +72,7 @@ GEODE_SIZE_CHECK(EffectGameObject, 0x730);
 // GEODE_MEMBER_CHECK(TeleportPortalObject, m_orangePortal, 0x4f8);
 
 // // StartPosObject
-// GEODE_MEMBER_CHECK(StartPosObject, m_levelSettings, 0x5e0);
+GEODE_MEMBER_CHECK(StartPosObject, m_startSettings, 0x730);
 
 // // SetupPulsePopup
 // GEODE_MEMBER_CHECK(SetupPulsePopup, m_currentColorSpr, 0x2d0);

@@ -15,6 +15,7 @@ GEODE_MEMBER_CHECK(LevelEditorLayer, m_trailTimer, 0x35b8);
 // GEODE_SIZE_CHECK(FMODAudioEngine, 0x648);
 GEODE_MEMBER_CHECK(FMODAudioEngine, m_system, 0x1e8);
 
+GEODE_MEMBER_CHECK(StartPosObject, m_startSettings, 0x730);
 
 GEODE_SIZE_CHECK(GJBaseGameLayer, 0x34c0);
 GEODE_MEMBER_CHECK(GJBaseGameLayer, m_groupDict, 0xde0);
