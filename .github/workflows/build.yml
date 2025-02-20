@@ -45,6 +45,7 @@ jobs:
             -DCMAKE_OSX_ARCHITECTURES='x86_64;arm64'
             -DCMAKE_AR='/usr/bin/ar'
             -DCMAKE_RANLIB='/usr/bin/ranlib'
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15
         - name: Linux
           os: ubuntu-22.04
           id: linux
