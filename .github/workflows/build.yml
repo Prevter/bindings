@@ -37,7 +37,7 @@ jobs:
           extra_flags: ''
         - name: Linux ARM64
           os: ubuntu-22.04-arm
-          id: linux-arm64
+          id: linux-aarch64
           extra_flags: ''
 
     name: Build ${{ matrix.config.name }}
@@ -123,10 +123,10 @@ jobs:
         mv geode-codegen-win/Codegen.exe geode-codegen-win.exe
         mv geode-codegen-mac/Codegen geode-codegen-mac-temp
         mv geode-codegen-linux/Codegen geode-codegen-linux-temp
-        mv geode-codegen-linux-arm64/Codegen geode-codegen-linux-arm64-temp
+        mv geode-codegen-linux-aarch64/Codegen geode-codegen-linux-arm64-temp
         rmdir geode-codegen-mac
         rmdir geode-codegen-linux
-        rmdir geode-codegen-linux-arm64
+        rmdir geode-codegen-linux-aarch64
         mv geode-codegen-mac-temp geode-codegen-mac
         mv geode-codegen-linux-temp geode-codegen-linux
         mv geode-codegen-linux-arm64-temp geode-codegen-linux-arm64
